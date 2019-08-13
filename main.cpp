@@ -18,8 +18,8 @@ class Queue{
         return;
       }
       
-      A[rear] = x;
-      rear++;
+      A[rear++] = x;
+      
     }
     
     void Dequeue(){
