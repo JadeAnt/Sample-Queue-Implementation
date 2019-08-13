@@ -13,16 +13,20 @@ class Queue{
   public{
   
     int Enqueue(int x){
-      if ((rear + 1) % (rear - front) == front)
+      if ((rear + 1) % (rear - front) == front){
+        cout << "Queue is full \n";
         return;
- 
+      }
+      
       A[rear] = x;
       rear++;
     }
     
     void Dequeue(){
-      if(Isempty())
+      if(Isempty()){
+        cout << "Queue is empty \n";
         return;
+      }
     
       else{
         queue[front] = 0;
@@ -35,7 +39,7 @@ class Queue{
       return A[front];
     }
     
-    bool Isempty(){
+    bool IsEmpty(){
       if(front == rear)
         return true;
       else
@@ -46,7 +50,8 @@ class Queue{
 
 }//Class Queue
 
-
+Queue <int> Q; // Globally declared queue
+  
 int main(){
 
   // Input here to test queue
